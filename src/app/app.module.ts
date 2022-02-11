@@ -1,16 +1,21 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { SharedService } from 'src/services/SharedService';
 
 import { AppComponent } from './app.component';
+import { ListviewComponent } from './components/listview/listview.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListviewComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
