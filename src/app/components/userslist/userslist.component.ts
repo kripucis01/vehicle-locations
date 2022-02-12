@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from 'src/services/SharedService';
-import { Data } from 'src/types/data.interface';
 import { VehiclesOwner } from 'src/types/vehiclesowner.interface';
 
 
 @Component({
-  selector: 'app-listview',
-  templateUrl: './listview.component.html',
-  styleUrls: ['./listview.component.css']
+  selector: 'app-userslist',
+  templateUrl: './userslist.component.html',
+  styleUrls: ['./userslist.component.css']
 })
-export class ListviewComponent implements OnInit {
+export class UserslistComponent implements OnInit {
 
   public vehiclesOwners: VehiclesOwner = {data:[]};
 

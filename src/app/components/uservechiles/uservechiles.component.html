@@ -1,0 +1,29 @@
+<p *ngIf="!vehicles"><em>Loading...</em></p>
+<header>
+   <h1>Vehicles for: {{ owner}} </h1>
+</header>
+<a routerLink="/users" class="backToUsers">Back to users</a>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="vehicles">
+  <thead>
+    <tr>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Year</th>
+      <th>Color</th>
+      <th>Vin number</th>
+      <th>Vehicle photo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let vehicle of vehicles">
+        <tr >
+            <td>{{ vehicle.make }}</td>
+            <td>{{ vehicle.model }}</td>
+            <td>{{ vehicle.year }}</td>          
+            <td [ngStyle]="{'background-color': vehicle.color}">    </td>
+            <td>{{ vehicle.vin }}</td>
+            <td><img [src]="vehicle.foto" width="auto" height="100"/></td>
+        </tr>
+        </ng-container>  
+  </tbody>
+</table>
