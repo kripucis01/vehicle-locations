@@ -18,5 +18,6 @@ td,th {
   table {
     border: 1px solid black;
     table-layout: fixed;
+    min-width: 50%;
     width: auto;
   }
