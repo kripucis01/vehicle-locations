@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UserslistComponent } from './components/userslist/userslist.component';
-import { UservechilesComponent } from './components/uservechiles/uservechiles.component';
+import { VehiclesTrackingComponent } from './components/vehiclestracking/vehiclestracking.component';
 
 const routes: Routes = [
   { path: 'users', component: UserslistComponent },
-  { path: 'uservechiles/:userid', component: UservechilesComponent },
+  { path: 'vehiclestracking/:userid', component: VehiclesTrackingComponent },
 ];
 
 @NgModule({
