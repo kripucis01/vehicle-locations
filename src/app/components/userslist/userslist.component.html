@@ -13,7 +13,7 @@
   </thead>
   <tbody>
     <ng-container *ngFor="let vehiclesOwner of vehiclesOwners.data">
-      <tr *ngIf="vehiclesOwner['owner']" [routerLink]="['/uservechiles', vehiclesOwner['userid']]" routerLinkActive="active">
+      <tr *ngIf="vehiclesOwner['owner']" [routerLink]="['/vehiclestracking', vehiclesOwner['userid']]" routerLinkActive="active">
         <td>{{ vehiclesOwner['owner'].name }}</td>
         <td>{{ vehiclesOwner['owner'].surname }}</td>
         <td>{{ vehiclesOwner['vehicles'].length }}</td>

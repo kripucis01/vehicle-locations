@@ -1,26 +1,29 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { SharedService } from 'src/services/SharedService';
+import { VehicleOwnerService } from 'src/services/VehicleOwnerService';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserslistComponent } from './components/userslist/userslist.component';
-import { UservechilesComponent } from './components/uservechiles/uservechiles.component';
 import { MapComponent } from './components/map/map.component';
+import { LocationService } from 'src/services/LocationService';
+import { VehiclesTrackingComponent } from './components/vehiclestracking/vehiclestracking.component';
+import { UserVehiclesComponent } from './components/uservechiles/uservehicles.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserslistComponent,
-    UservechilesComponent,
-    MapComponent
+    UserVehiclesComponent,
+    MapComponent,
+    VehiclesTrackingComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [SharedService],
+  providers: [VehicleOwnerService, LocationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

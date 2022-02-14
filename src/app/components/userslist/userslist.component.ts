@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SharedService } from 'src/services/SharedService';
-import { VehiclesOwner } from 'src/types/vehiclesowner.interface';
+import { VehicleOwnerService } from 'src/services/VehicleOwnerService';
+import { VehiclesOwner } from 'src/types/vehiclesowner';
 
 
 @Component({
@@ -12,9 +12,9 @@ export class UserslistComponent implements OnInit {
 
   public vehiclesOwners: VehiclesOwner = {data:[]};
 
-   constructor(private sharedService: SharedService) {}
+   constructor(private service: VehicleOwnerService) {}
   ngOnInit(): void {
-    this.sharedService.getUserAndCarData().subscribe(result => {
+    this.service.getUserAndCarData().subscribe(result => {
       this.vehiclesOwners = result;
     }, error => console.error(error));
   }
